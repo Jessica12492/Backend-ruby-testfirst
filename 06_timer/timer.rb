@@ -5,9 +5,9 @@ class Timer
     @seconds = 0
   end
 
-  def time_string
-  
+
+def time_string  
  
-    [seconds / 60 **2, seconds / 60 % 60, seconds % 60].map{|time| time.to_s.rjust(2,'0')}.join(':')
+"%02d:%02d:%02d" %  [seconds / 60 **2, seconds / 60 % 60, seconds % 60]
   end
 end

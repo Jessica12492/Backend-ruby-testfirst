@@ -1,27 +1,17 @@
-def translate(str)
-  
-    vowels = %w{a e i o u}
-    new_word = str.split(" ")
-    new_word.map! do |word|
-      letters = word.split("")
-      vowel = letters.index do |letter|
-        vowels.include?(letter)
-      end
-      
-      if letters[vowel] == "u"
-        vowel += 1
-      elsif letters[vowel] == "qu"
-        vowel+=2
-      end
-      letters.rotate!(vowel)
-      letters.push("ay")
-      letters.join
-  
+def translate(string)
+  vowels = %w[a e i o u]
+  new_word = string.split(' ')
+  new_word.map! do |word|
+    letters = word.split('')
+    count_vowel = letters.index do |letter|
+      vowels.include?(letter)
+    end
+     if letters[count_vowel] == 'u'
+   count_vowel += 1
      end
-  
-  return new_word.join(" ")
+    letters.rotate!(count_vowel)
+    letters.push('ay')
+    letters.join
   end
-
-  
-   
-
+  new_word.join(' ')
+end
