@@ -10,6 +10,8 @@ def translate(str)
       
       if letters[vowel] == "u"
         vowel += 1
+      elsif letters[vowel] == "qu"
+        vowel+=2
       end
       letters.rotate!(vowel)
       letters.push("ay")
@@ -19,16 +21,7 @@ def translate(str)
   
   return new_word.join(" ")
   end
-  # call method
-puts translate 'apple'
-puts translate 'bannana'
-puts translate 'cherry'
-puts translate 'eat pie'
-puts translate 'three'
-puts translate 'school'
-puts translate 'quiet'
-puts translate 'square'
-puts translate 'the quick brown fox'
+
   
    
 

@@ -1,14 +1,14 @@
-def echo(echo)
-  echo
+
+def echo insert
+insert
+end
+def shout insert
+insert.upcase
 end
 
-def shout(hello)
-  hello.upcase
-end
 
-
-def repeat(hello, repeat = 2)
-  (hello + " ") * (repeat - 1) + hello
+def repeat(hello, copy = 2)
+  (hello + " ") * (copy - 1) + hello
 end
 
 

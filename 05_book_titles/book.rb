@@ -7,8 +7,8 @@ class Book
     words = string.split(" ")
   
     words.map do |word|
-    word.capitalize! unless articles.include? word
-  end
+       word.capitalize! unless articles.include? word
+    end
       
     words[0].capitalize!
     @title = words.join(" ")
